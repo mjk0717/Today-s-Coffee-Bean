@@ -17,32 +17,13 @@
     <script defer src="/__/firebase/8.6.1/firebase-analytics.js"></script>
     <script defer src="/__/firebase/8.6.1/firebase-remote-config.js"></script>
     <script defer src="/__/firebase/8.6.1/firebase-performance.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      header { color:white; background: #40147d;}
-      body { background: #ffffff; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      main { padding: 2% 30%; background-color: white; }
-      footer { height: 300px; background-color: black; }
-      a:link { color: white; text-decoration: none; }
-      a:visited { color: white; text-decoration: none; }
-      h1 { margin: 0;}
-      .foo { padding: 2% 30%; }
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-      }
-      .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      }
-      .container {
-        padding: 2px 16px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header>
@@ -91,45 +72,6 @@
       </div>
     </main>
     <footer>
-
     </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
   </body>
 </html>
